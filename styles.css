@@ -40,12 +40,15 @@ body {
     width: 370px;
     max-width: 100%;
     z-index: 100;
-    transition: 0.3s ease;
-    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-.container:hover {
+.container:hover .card {
     transform: rotateY(180deg);
+}
+
+.container:hover .cardback {
+    transform: rotateY(0deg);
 }
 
 .card {
@@ -59,10 +62,12 @@ body {
     display: flex;
     flex-direction: column;
     backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 }
 
 .cardback {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     height: 225px;
     width: 370px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -74,6 +79,8 @@ body {
     position: absolute;
     inset: 0;
     backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 }
 
 .top {
