@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121320;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gradient {
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    background: linear-gradient(90deg , violet , violet , white);
+    position: relative;
+    left: 120px;
+    bottom: 100px;
+    z-index: -1;
+}
+
+.revgradient {
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    background: linear-gradient(90deg , white , violet , violet);
+    position: relative;
+    right: 120px;
+    top: 100px;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 370px;
+    max-width: 100%;
+    z-index: 100;
+    transition: 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 225px;
+    width: 370px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 20px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+
+.cardback {
+    transform: rotateY(180deg);
+    height: 225px;
+    width: 370px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+}
+
+.top {
+    flex: 1.5;
+}
+
+.space {
+    flex: 0.5;
+}
+
+.bottom {
+    display: flex;
+    flex: 3;
+}
+
+.chip {
+    height: 60px;
+    width: 100px;
+    position: relative;
+    left: 60px;
+    bottom: 5px;
+}
+
+.logo {
+    height: 45px;
+    width: 66px;
+    position: relative;
+    bottom: 10px
+}
+
+.text {
+    color: white;
+    font-size: 17px;
+    position: relative;
+    bottom: 28px;
+    left: 10px;
+}
+
+.right {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 60px;
+}
+
+.cardback span {
+    white-space: nowrap;
+}
+
+.blackstrip {
+    height: 50px;
+    width: 370px;
+    background-color: black;
+    position: relative;
+    top: 15px;
+    right: 20px;
+}
+
+.whitestrip {
+    height: 40px;
+    width: 270px;
+    background-color: white;
+    position: relative;
+    top: 35px;
+    border-radius: 5px;
+}
+
+.cvv {
+    background-color: white;
+    height: 30px;
+    width: 40px;
+    position: relative;
+    left: 265px;
+    top: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.cvv em {
+    color: black;
+    position: relative;
+    left : 10px;
+    top: 7px;
+}
+
+.dummy {
+    color: white;
+    position: relative;
+    top: 50px;
+    font-size: 11px;
+    white-space: inherit;
+}
